@@ -22,6 +22,18 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 def home():
     return render_template("index.html", paystack_key=PAYSTACK_PUBLIC_KEY)
 
+from flask import Flask
+
+app = Flask(__name__)
+
+# Vercel Test Route
+@app.route('/')
+def home():
+    return "Hello, Vercel!"
+
+if __name__ == "__main__":
+    app.run()
+
 # AI Suggestion Route
 @app.route("/get_suggestion", methods=["POST"])
 def get_suggestion():
