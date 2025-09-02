@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Suggestions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://unpkg.com/intasend-inlinejs-sdk@4.0.5/build/intasend-inline.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>AI Suggestion Service</h2>
+        <textarea id="prompt" placeholder="Enter your prompt"></textarea>
+        <button id="suggestBtn">Get Suggestion</button>
+        <div id="suggestion"></div>
+
+        <h3>Buy Credits</h3>
+        <button id="buyCreditsBtn">Buy 10 Credits (KES 100)</button>
+    </div>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
